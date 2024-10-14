@@ -1,6 +1,8 @@
-// OpenWeatherMap API key
-const apiKey = '8b52ec854e71a55f98dc0f1658922cf9';
-const city = 'Aix-en-Provence'; // You can replace this with your preferred city
+// Get the query parameters from the URL
+const params = new URLSearchParams(window.location.search);
+const apiKey = params.get('apiKey');
+const city = params.get('city') || 'London'; // Default to London if no city is provided
+
 
 // Function to update time
 function updateTime() {
