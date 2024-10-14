@@ -1,0 +1,62 @@
+/* Make the video cover the entire background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; /* Place the video behind the content */
+    object-fit: cover; /* Make sure the video covers the whole screen */
+}
+
+.dark-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(255, 0, 150, 0.4), rgba(0, 255, 255, 0.4), rgba(0, 0, 0, 0.7)); /* Diagonal gradient */
+    z-index: 0;
+    animation: pulse 5s infinite; /* Add pulsing animation */
+}
+
+
+/* Style for the content (time, weather) */
+.screensaver {
+    text-align: center;
+    color: white;
+    position: relative; /* Keep it above the video */
+    z-index: 1; /* Ensure text appears above video */
+}
+
+/* Time and weather styling */
+.time {
+    font-size: 120px;
+    margin-bottom: 20px;
+}
+
+.weather {
+    font-size: 40px;
+}
+
+/* Ensure body takes up full screen and no margins */
+body {
+    cursor: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(270deg, #ff7e5f, #feb47b, #86a8e7, #91eae4);
+    background-size: 800% 800%;
+    animation: gradientAnimation 15s ease infinite;
+}
+
+/* Animation for background gradient */
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
