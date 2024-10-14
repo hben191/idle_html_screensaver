@@ -36,7 +36,7 @@ while true; do
     # Check idle time
     IDLE=$(xprintidle)
 
-    if [ $IDLE -gt $((IDLE_TIME)) ]; then
+    if [ $IDLE -gt $((IDLE_TIME * 1000)) ]; then
         # Ensure the profile exists
         create_firefox_profile
 
