@@ -30,6 +30,14 @@ To customize the weather display in your screensaver, you'll need to set up a fe
 - **`WEATHER_API_KEY`**: Your API key for accessing the OpenWeatherMap API. You can create a free account and obtain your API key from [OpenWeatherMap](https://openweathermap.org/appid).
 - **`CITY`**: The name of the city for which you want to display the weather. You can set this variable in the `.env` file, or the script will default to "London" if not provided.
 
+### How to Create Your OpenWeatherMap API Key
+1. Go to the [OpenWeatherMap registration page](https://home.openweathermap.org/users/sign_up).
+2. Create a free account.
+3. Once logged in, navigate to the API keys section to generate your new API key.
+4. Copy the API key and paste it into your `.env` file as shown above.
+
+With these variables set, your screensaver will be able to display the current weather for your specified city.
+
 ## Usage
 Simply run the script and it will start monitoring your idle time:
 ```bash
